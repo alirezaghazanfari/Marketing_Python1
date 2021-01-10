@@ -2,8 +2,8 @@ import BaseAdvertising
 class Advertiser(BaseAdvertising.BaseAdvertiser):
 
     advertisers = []
-    def _init_(self,id,name):
-        self.id = id
+    def __init__(self,id,name):
+        super().__init__(id)
         self.name = name
         Advertiser.advertisers.__add__(self)
     def getName(self):
