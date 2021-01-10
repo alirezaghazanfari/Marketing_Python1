@@ -2,12 +2,14 @@ import BaseAdvertising
 
 
 class Ad(BaseAdvertising.BaseAdvertiser):
-    def __init__(self, id, title, img_url, link, advertiser):
-        super().__init__(id)
+    def __init__(self, id, title, img_url, link, advertiser,views = 0,clicks = 0):
+        super().__init__(views,clicks)
+        self.id = id
         self.title = title
         self.img_url = img_url
         self.link = link
         self.advertiser = advertiser
+
 
     def get_title(self):
         return self.title
